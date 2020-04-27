@@ -1,0 +1,11 @@
+mgmt01-unlucky
+dfs01-unlucky
+dfs02-unlucky
+dc01-unlucky
+dc02-unlucky
+[windows:vars]
+ansible_user=administrator@unlucky.local
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+ansible_winrm_transport=ntlm
+ansible_winrm_port=5986

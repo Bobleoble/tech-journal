@@ -1,0 +1,16 @@
+- name: install apache for util
+  hosts: Util01-Unlucky
+  remote_user: deployer
+  become: true
+  become_user: root
+  tasks:
+  - name: Install httpd
+    yum:
+      name: httpd
+      state: present
+      update_cache: true
+  - name: Install nmap
+    yum:
+      name: nmap
+      state: present
+      update_cache: true
